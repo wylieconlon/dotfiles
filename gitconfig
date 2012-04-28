@@ -1,0 +1,16 @@
+[core]
+	editor = mvim
+[user]
+	email = wylieconlon@gmail.com
+	name = Wylie Conlon
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	cl = clone
+	st = status
+	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+[github]
+	user = wylieconlon
+[push]
+	default = tracking
