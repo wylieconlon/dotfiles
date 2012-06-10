@@ -18,6 +18,8 @@ alias ls="ls -G"
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+alias g=git
+
 export CLOJURE_HOME="$HOME/Library/Clojure"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:/Users/Wylie/Library/Python/2.7/site-packages/:$PYTHONPATH"
 

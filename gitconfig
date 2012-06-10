@@ -1,5 +1,5 @@
 [core]
-	editor = mvim
+	editor = vim
 [user]
 	email = wylieconlon@gmail.com
 	name = Wylie Conlon
