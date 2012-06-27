@@ -1,46 +1,42 @@
-set background=dark
-" colorscheme ir_black
 colorscheme Tomorrow-Night
 
+" global settings
 set nocompatible
+set backupdir=~/tmp
 
+set mouse=a
+set showmatch
 set number
 set ruler
-
 " highlight cursor in xy
 set cursorline
 set cursorcolumn
 
-set mouse=a
-set ignorecase
-set smartcase
-set showmatch
-
-set scrolloff=8
-set sidescrolloff=15
-
+" indent settings
 set autoindent
-set smartindent
 set shiftround
-set copyindent
 set preserveindent
 set shiftwidth=4
 set tabstop=4
+set noexpandtab
+set showmatch
 
-set showcmd
+" highlighting shows tabs as pipes and spaces as underlines
+set list listchars=tab:\|\ 
 
+" search options
+set ignorecase
+set smartcase
 set incsearch
 set hlsearch
 
-filetype on
-filetype plugin on
-filetype plugin indent on
-syntax on
-syn on
+set showcmd
 
+filetype plugin on
+filetype indent on
+
+" custom movement
+set scrolloff=8
+set sidescrolloff=15
 set whichwrap+=<,>,[,]
 
-map <MouseDown> <C-Y><C-Y><C-Y><C-Y><C-Y>
-map <S-MouseDown> <C-U>
-map <MouseUp> <C-E><C-E><C-E><C-E><C-E>
-map <S-MouseUp> <C-D>

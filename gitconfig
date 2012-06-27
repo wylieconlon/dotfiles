@@ -1,8 +1,11 @@
 [core]
 	editor = vim
+	excludesfile = /Users/Wylie/.gitignore_global
+
 [user]
 	email = wylieconlon@gmail.com
 	name = Wylie Conlon
+
 [alias]
 	br = branch
 	ci = commit
@@ -10,7 +13,33 @@
 	cl = clone
 	st = status
 	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+
 [github]
 	user = wylieconlon
+
 [push]
 	default = tracking
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan

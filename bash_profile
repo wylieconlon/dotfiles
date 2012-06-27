@@ -4,7 +4,8 @@ function parse_git_branch {
 }
 
 # Command prompts
-export PS1="\\w\$(parse_git_branch) > "
+
+export PS1="\\w\e[1;34m\$(parse_git_branch)\[\e[m\] > "
 export PS2='> '
 export PS3='#? '
 export PS4='+'
