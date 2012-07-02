@@ -3,12 +3,15 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+# Colors
+
+blue=$(tput setaf 4)
+reset=$(tput sgr0)
+
 # Command prompts
 
-export PS1="\\w\e[1;34m\$(parse_git_branch)\[\e[m\] > "
-export PS2='> '
-export PS3='#? '
-export PS4='+'
+PS1="\\w\[$blue\]\$(parse_git_branch)\[$reset\] > "
+PS2='> '
 
 # Text editor
 export EDITOR='vim'
