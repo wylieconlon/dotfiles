@@ -11,7 +11,7 @@
 	ci = commit
 	co = checkout
 	cl = clone
-	st = status
+	st = status -sbu
 	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
 
 [github]
