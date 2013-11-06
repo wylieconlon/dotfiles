@@ -344,8 +344,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("ShowMarksHLm", s:aqua, s:background, "none")
 
 	" custom highlighting by wylie
-	call <SID>X("Whitespace", "", "", "underline")
-	match Whitespace /  \+/
+	" call <SID>X("Whitespace", "", "", "underline")
+	" match Whitespace /  \+/
 
 	" Delete Functions
 	delf <SID>X

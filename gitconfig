@@ -45,3 +45,7 @@
 	untracked = cyan
 [heroku]
 	account = personal
+[merge]
+	stat = true
+[diff]
+	renames = copies

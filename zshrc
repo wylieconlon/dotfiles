@@ -8,6 +8,13 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="simple"
 
 alias g=git
+alias gs="g st"
+alias gd="g diff"
+alias gc="g commit"
+alias gps="g push"
+alias gpl="g pull"
+
+zstyle ':completion:*:*:git:*' script ~/.git-completion.sh
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -21,11 +28,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 export CLOJURE_HOME="$HOME/Library/Clojure"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:/Users/Wylie/Library/Python/2.7/site-packages/:$PYTHONPATH"
 
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/go/bin:$PATH
@@ -46,3 +53,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000
