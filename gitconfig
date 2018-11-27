@@ -13,6 +13,8 @@
 	cl = clone
 	st = status -sbu
 	la = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	fa = fetch --all
+	rh = reset --hard origin/master
 
 [github]
 	user = wylieconlon

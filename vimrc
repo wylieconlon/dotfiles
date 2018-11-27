@@ -2,7 +2,6 @@ colorscheme Tomorrow-Night
 
 " global settings
 set nocompatible
-set backupdir=~/tmp
 
 set mouse=a
 set showmatch
