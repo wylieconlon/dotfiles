@@ -1,10 +1,16 @@
 [core]
 	editor = vim
-	excludesfile = /Users/Wylie/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 [user]
-	email = wylieconlon@gmail.com
+	email = wylie@superblockshq.com
 	name = Wylie Conlon
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
 
 [alias]
 	br = branch
