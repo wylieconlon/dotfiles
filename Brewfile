@@ -1,51 +1,26 @@
 # Brewfile — install with: `brew bundle --file=Brewfile`
-# Generated from `brew leaves` and `brew list --cask` on my MacBook Pro.
-
-# --- Taps --------------------------------------------------------------------
-tap "bufbuild/buf"
-tap "carvel-dev/carvel"
-tap "databricks/tap"
-tap "homebrew/bundle"
-tap "int128/kubelogin"
+# General-purpose tools only. Work-specific tools (kubernetes, terraform,
+# databricks, buf, etc.) live outside this repo — install them ad hoc on the
+# machines that need them, or keep an uncommitted `Brewfile.work` alongside.
 
 # --- CLI tools (formulae) ----------------------------------------------------
-brew "actionlint"
-brew "awscli"
-brew "bash"
-brew "bat"
-brew "bufbuild/buf/buf"
-brew "carvel-dev/carvel/kapp"
-brew "databricks/tap/databricks"
-brew "eksctl"
-brew "gh"
-brew "go"
-brew "gron"
-brew "helm"
-brew "int128/kubelogin/kubelogin"
-brew "jenv"
-brew "jq"
-brew "kind"
-brew "kubectx"
-brew "kubernetes-cli@1.29"
-brew "kustomize"
-brew "librsvg"
-brew "postgresql@14"
-brew "pyenv"
-brew "regclient"
-brew "ripgrep"
-brew "stern"
-brew "terraform"
-brew "terragrunt"
-brew "tfenv"
-brew "tilt"
-brew "trivy"
-brew "yq"
-brew "z"
+brew "awscli"      # AWS CLI (personal accounts too)
+brew "bash"        # Up-to-date bash; macOS ships 3.x
+brew "bat"         # `cat` with syntax highlighting
+brew "gh"          # GitHub CLI
+brew "go"          # Go toolchain
+brew "gron"        # Grep-able JSON
+brew "jenv"        # Java version manager
+brew "jq"          # JSON query
+brew "pyenv"       # Python version manager
+brew "ripgrep"     # `rg` — fast grep
+brew "yq"          # YAML query (jq for YAML)
+brew "z"           # Frecency-based directory jumper
 
 # --- GUI apps (casks) --------------------------------------------------------
 cask "1password"
 cask "1password-cli"
 cask "iterm2"
-cask "rectangle"
-cask "tableplus"
+cask "rectangle"           # Window snapping
+cask "tableplus"           # SQL client
 cask "visual-studio-code"

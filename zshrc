@@ -57,7 +57,8 @@ fi
 command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
 
 # --- AWS ----------------------------------------------------------------------
-export AWS_PROFILE=dev-sso
+# Set AWS_PROFILE in ~/.zshrc.local for work or personal accounts, e.g.:
+#   export AWS_PROFILE=dev-sso
 
 # --- uv (Python) --------------------------------------------------------------
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"

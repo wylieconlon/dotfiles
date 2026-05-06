@@ -9,7 +9,7 @@ bootstrap of a new MacBook (Apple Silicon).
 | ------------------ | ------------------------------------------------------ |
 | `install.sh`       | Symlinks every config into `$HOME` and runs `macos.sh` |
 | `macos.sh`         | Applies system preferences via `defaults write`        |
-| `Brewfile`         | All Homebrew formulae and casks I use                  |
+| `Brewfile`         | General-purpose Homebrew formulae and casks            |
 | `zshrc`            | Interactive zsh config (oh-my-zsh, nvm, pnpm, bun, …)  |
 | `zprofile`         | Login-shell env (PATH, prompt, aliases)                |
 | `gitconfig`        | Git aliases, color, user identity                      |
@@ -112,6 +112,23 @@ are below the GUI minimums and require `defaults write`.
   managers (nvm/pnpm/bun/jenv), `direnv`, and work-specific scripts (each
   guarded by an existence check so this repo stays portable).
 - `~/.zshrc.local` (optional, gitignored) — for machine-specific overrides.
+
+### Work / per-machine overrides
+
+This repo is intentionally personal. Anything work-specific belongs in one of:
+
+- `~/.zshrc.local` — extra exports, e.g. `export AWS_PROFILE=dev-sso`, work
+  source-of-functions, etc. Already wired into `zshrc`.
+- A local `Brewfile.work` next to this `Brewfile` (don't commit it). Install
+  with `brew bundle --file=Brewfile.work`.
+- Per-directory git identity via `includeIf` in `~/.gitconfig.local`:
+
+  ```
+  [includeIf "gitdir:~/dev/superblocks/"]
+      path = ~/.gitconfig.work
+  ```
+
+  with `~/.gitconfig.work` containing the work email override.
 
 ### Auto Node version per directory
 
